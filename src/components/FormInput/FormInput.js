@@ -1,0 +1,22 @@
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { TextInput } from 'react-native-paper';
+
+const FormInput = ({label, value,setValue}) => {
+  return(
+    <TextInput
+        style={styles.textInput}
+        label={label}
+        value={value}
+        onChangeText={(text)=> setValue(text)}
+      />
+  )
+}
+
+const styles = StyleSheet.create({
+  textInput:{
+    marginBottom: 10
+  }
+})
+
+export default FormInput
